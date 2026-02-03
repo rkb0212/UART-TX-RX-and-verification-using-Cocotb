@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1770086045" />
+    <testcase name="test_single_byte_loopback" classname="test_uart_loopback" file="/Users/rohankumarbarouliya/Desktop/jupyterfiles/cocotb/uart/test_uart_loopback.py" lineno="53" time="0.01576709747314453" sim_time_ns="83500.0" ratio_time="5295838.3838383835" />
+    <testcase name="test_many_random_bytes" classname="test_uart_loopback" file="/Users/rohankumarbarouliya/Desktop/jupyterfiles/cocotb/uart/test_uart_loopback.py" lineno="86" time="0.2951638698577881" sim_time_ns="1744000.0" ratio_time="5908582.242265189" />
+    <testcase name="test_back_to_back_bytes" classname="test_uart_loopback" file="/Users/rohankumarbarouliya/Desktop/jupyterfiles/cocotb/uart/test_uart_loopback.py" lineno="107" time="0.06059384346008301" sim_time_ns="352999.99999999977" ratio_time="5825674.356381489" />
+  </testsuite>
+</testsuites>
