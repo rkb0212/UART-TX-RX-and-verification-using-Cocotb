@@ -1,1 +1,35 @@
 # UART-TX-RX-and-verification-using-Cocotb
+The goal of this project was to design and verify a UART transmitter (TX) and receiver (RX) using:
+- RTL (Verilog) for functionality
+- Traditional RTL testbench for initial verification
+- Use Python cocotb to verify it
+uart_tx.v : The UART transmitter converts parallel data (1 byte) into a serial bit stream following the UART protocol.
+uart_rx.v : The UART receiver converts the incoming serial data back into a parallel byte.
+uart_tb.v : A traditional Verilog testbench used to verify TX and RX together, it generates a stable system clock, Drives r_tx_dv and r_tx_byte to the transmitter, o_tx_serial from TX is directly connected to i_rx_serial of RX, Waits for w_rx_dv to compare w_rx_byte with the transmitted byte & prints PASS/FAIL message.
+
+Result of RTL wave: 
+The RTL waveform shows a complete end-to-end UART loopback operation, demonstrating correct interaction between the transmitter and receiver. The clock signal is a continuous square wave and serves as the timing reference for both the UART TX and RX logic. When a transmission is initiated, the tx_dv signal pulses high for a single clock cycle, indicating that a new byte is ready to be sent. At the same time, tx_byte holds the value to be transmitted, which in this example is 0xAB (binary 10101011).
+The tx_serial line is initially idle at logic high. Once transmission begins, it goes low to indicate the start bit, then toggles according to the data bits of the byte, sent least-significant bit first.
+ After all eight data bits are transmitted, the line returns high for the stop bit and then remains high in the idle state. This sequence clearly shows a correctly formed UART frame: 
+         idle → start bit → bit0 → bit1 → … → bit7 → stop bit → idle. 
+Because the design uses a loopback connection, the rx_serial signal is identical to tx_serial, allowing the receiver to observe exactly what the transmitter sends.
+On the receive side, the receiver detects the start bit, samples the serial data at the correct bit centers, and reconstructs the original byte. When reception is complete, rx_dv pulses high for one clock cycle, indicating that a valid byte has been captured. At the same time, rx_byte updates to the received value, which matches the transmitted byte (0xAB). 
+The simulation output prints the message “LOOPBACK PASS – Sent ab, Received ab,” confirming that the transmitted serial frame was correctly generated, sampled at the proper timing, and decoded without error. Overall, the waveform verifies the functional correctness of the UART transmitter and receiver at the RTL level.
+
+uart_loopback_top.v : 
+As cocotb operates from Python and can only drive and observe signals that are module ports. 
+In the original RTL testbench (uart_tb.v), the transmitter was driven using internal registers such as r_tx_dv and r_tx_byte. Since these signals are not module ports, cocotb cannot access or control them directly, which makes uart_tb.v unsuitable for Python-based verification.
+To solve this, I created uart_loopback_top.v as a wrapper (top-level) module. This wrapper instantiates both uart_tx and uart_rx, connects the transmitter’s serial output directly to the receiver’s serial input to form an internal loopback, and exposes all the required control and observation signals as top-level ports. These include inputs like i_tx_dv and i_tx_byte, and outputs such as o_rx_dv, o_rx_byte, o_tx_done (and optionally o_tx_active).
+As a result, uart_loopback_top.v acts as a cocotb-friendly DUT wrapper. In cocotb, the simulator is invoked with uart_tx.v, uart_rx.v, and uart_loopback_top.v, with uart_loopback_top set as the top-level module. cocotb then attaches to the wrapper’s ports to drive stimulus from Python and to observe and check the UART responses, enabling effective Python-based verification of the UART design.
+
+uart_loopback_top.py (cocotb test):
+cocotb test, Start a clock [i.e. Clock(dut.i_clock, CLK_PERIOD_NS, unit="ns").start() ] which creates a 10 MHz clock just like Verilog testbench.
+In the cocotb-based verification, the send_byte(dut, value) function is used to initiate a UART transmission from Python. It places the byte to be transmitted on the i_tx_byte signal and then pulses i_tx_dv high for one clock cycle. This single-cycle pulse acts as a “send request” to the UART transmitter, telling it to begin serializing the provided byte.
+
+The wait_for_rx_dv(dut, …) function is responsible for detecting successful reception. It repeatedly waits on clock edges and monitors the o_rx_dv signal. When o_rx_dv becomes high, it indicates that the UART receiver has fully captured a byte. At that moment, the function reads o_rx_byte and returns the received value. Conceptually, this function means “wait until the receiver says it has received a byte.”
+Using these helper functions, three cocotb tests are implemented. The test_single_byte_loopback test sends a single known value (0xAB), waits for the receive-valid pulse, and asserts that the received byte matches the transmitted one. The test_many_random_bytes test repeatedly sends multiple randomly generated bytes and checks that each received byte matches the corresponding transmitted value. The test_back_to_back_bytes test sends a sequence of bytes one after another and verifies that each byte is correctly received in order.
+Overall, the cocotb tests perform the same logical verification as the original uart_tb.v RTL testbench: they stimulate the UART transmitter, loop the serial output back into the receiver, and confirm that the received data matches what was sent. The key difference is that this verification is now done from Python using cocotb instead of a pure Verilog testbench.
+
+During cocotb-based UART verification, several issues were encountered and resolved. Initially, pip refused to install cocotb due to macOS Homebrew’s externally managed environment (PEP 668). This was fixed by creating and using a Python virtual environment. Next, cocotb failed to install with Python 3.14 because cocotb 2.0.1 only supports up to Python 3.13; installing Python 3.13 and recreating the virtual environment resolved this.
+Build failures occurred due to spaces in the project directory path, which broke Makefile include paths; this was fixed by adjusting the Makefile or using a clean path. A runtime error (vvp: illegal option -- P) occurred because compile-time parameters were incorrectly passed to vvp; moving them to IVERILOG_ARGS corrected this.
+Additional issues arose from cocotb 2.x API changes, such as invalid use of .integer and cocotb.result.TestFailure; these were fixed by using int(signal.value), standard Python exceptions, and updated Clock arguments. Finally, random UART tests intermittently failed due to missed one-cycle o_rx_dv pulses and TX busy conditions. This was debugged by improving DV detection, increasing timeouts, and ultimately fixed by adding a proper TX-idle handshake using o_tx_active, making the cocotb driver robust and reliable.
