@@ -48,7 +48,7 @@ module uart_tb ();
     @(posedge r_clock);
     r_tx_dv   <= 1'b0;
 
-    // wait for rx_dv with timeout (pure Verilog)
+    // wait for rx_dv with timeout 
     timeout_cnt = 0;
     while (w_rx_dv !== 1'b1 && timeout_cnt < (c_CLKS_PER_BIT * 20)) begin
       @(posedge r_clock);
