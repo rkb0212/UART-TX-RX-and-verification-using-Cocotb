@@ -4,7 +4,15 @@ import uvm_pkg::*;
 class transaction extends uvm_sequence_item;
   rand bit [7:0] i_tx_byte;
   //bit [7:0] o_rx_byte;
-  
+  constraint c_bias_corner {
+  i_tx_byte dist {
+    8'h00 := 20,
+    8'hFF := 20,
+    8'h55 := 10,
+    8'hAA := 10,
+    [8'h01:8'hFE] :/ 40
+  };
+  } 
   function new(input string path = "transaction");
     super.new(path);
   endfunction
@@ -67,6 +75,7 @@ class driver extends uvm_driver #(transaction);
  
     virtual task run_phase(uvm_phase phase);
       transaction tc, tx;
+      int gap;
       aif.i_tx_dv <=0;
       aif.i_tx_byte <=8'h00;
     forever begin
@@ -81,12 +90,21 @@ class driver extends uvm_driver #(transaction);
       `uvm_info("DRV", $sformatf("Trigger DUT tx_byte: %0d",tc.i_tx_byte), UVM_NONE); 
       tx = transaction::type_id::create("tx");
       tx.i_tx_byte = tc.i_tx_byte;
+      
+       if ($urandom_range(0, 19) == 0) begin
+      tx.i_tx_byte ^= 8'h01; // flip one bit i.e.LSB bit[ TO CHECK MISMATCH CATCHING]
+	end
+      
       drv_ap.write(tx);
       @(next);
     seq_item_port.item_done();
       @(posedge aif.i_clock);
       while(!aif.o_tx_done)
         @(posedge aif.i_clock);
+      
+      
+      gap = $urandom_range(0, 20);
+      repeat(gap) @(posedge aif.i_clock);
     end
    endtask
 endclass
@@ -103,9 +121,13 @@ class monitor extends uvm_monitor;
     option.per_instance = 1;
     option.name = "UART_MONITOR_TX_RANGE_COVERED";
     TX_RANGE_CP: coverpoint t.i_tx_byte{
-      bins low = {[0:85]};
-      bins med = {[86:170]};
-      bins high = {[171:255]};
+      bins zero = {8'h00};
+      bins all_ones = {8'hFF};
+      bins alt1 = {8'h55};
+      bins alt2 = {8'hAA};
+      bins low = {[1:85]} with (!(item inside {8'h55}));
+      bins med = {[86:170]} with (!(item inside {8'hAA}));
+      bins high = {[171:254]};
     }
   endgroup
   
@@ -134,6 +156,10 @@ class monitor extends uvm_monitor;
       if (aif.o_rx_dv) begin
     t = transaction::type_id::create("t");
     t.i_tx_byte = aif.o_rx_byte;
+    /* if ($urandom_range(0, 19) == 0) begin
+      t.i_tx_byte = t.i_tx_byte ^ 8'h01; // flip one bit i.e.LSB bit[ TO CHECK MISMATCH CATCHING]
+	end */
+        
         cvg_tx.sample();   ////////------------
 	`uvm_info("MON", $sformatf("Data send to Scoreboard i_tx_byte : %0d", t.i_tx_byte), UVM_NONE);
         
@@ -355,3 +381,4 @@ module uart_tb();
     $dumpvars(0);
   end
 endmodule
+
