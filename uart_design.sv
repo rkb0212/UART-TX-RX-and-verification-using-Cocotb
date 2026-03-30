@@ -305,4 +305,20 @@ interface uart_if;
   
   logic o_rx_dv;
   logic [7:0] o_rx_byte;
+  
+  //start bit check
+  property p_start_bit;
+    @(posedge i_clock)
+    (i_tx_dv && !o_tx_active) |=> ##1 (o_tx_active && (o_tx_serial == 0));
+  endproperty
+  assert property(p_start_bit)
+    else $error("Start bit violation detected");
+    
+  //tx done check
+    property p_tx_done;
+  @(posedge i_clock)
+    o_tx_done |-> !o_tx_active;
+  endproperty
+  assert property(p_tx_done)
+    else $error("TX done violation detected");
 endinterface
