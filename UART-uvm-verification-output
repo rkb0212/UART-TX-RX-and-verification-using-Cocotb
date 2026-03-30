@@ -1,0 +1,269 @@
+# KERNEL: UVM_INFO /home/runner/testbench.sv(31) @ 17285350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :171 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(81) @ 17285550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(196) @ 17285550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(138) @ 17368750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(216) @ 17368750: uvm_test_top.e.s [SCO] Compare Expected: 171 Actual: 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(219) @ 17368750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(31) @ 17372650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :102 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(81) @ 17372850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 102
+# KERNEL: UVM_INFO /home/runner/testbench.sv(196) @ 17372850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 102
+# KERNEL: UVM_INFO /home/runner/testbench.sv(138) @ 17456050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 102
+# KERNEL: UVM_INFO /home/runner/testbench.sv(216) @ 17456050: uvm_test_top.e.s [SCO] Compare Expected: 102 Actual: 102
+# KERNEL: UVM_INFO /home/runner/testbench.sv(219) @ 17456050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_objection.svh(1271) @ 17456050: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/runner/testbench.sv(128) @ 17456050: uvm_test_top.e.a.m [MON_COV] Covergroup UART_MONITOR_TX_RANGE_COVERED coverage = 100.00%
+# KERNEL: UVM_INFO /home/runner/testbench.sv(233) @ 17456050: uvm_test_top.e.s [SCO] PASS=200 FAIL=0 PENDING=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(234) @ 17456050: uvm_test_top.e.s [SCO_COV] Covergroup UART_SCOREBOARD_MATCH_COVERED coverage = 66.67%
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_report_server.svh(869) @ 17456050: reporter [UVM/REPORT/SERVER] 
+# KERNEL: --- UVM Report Summary ---
+# KERNEL: 
+# KERNEL: ** Report counts by severity
+# KERNEL: UVM_INFO : 1206
+# KERNEL: UVM_WARNING :    0
+# KERNEL: UVM_ERROR :    0
+# KERNEL: UVM_FATAL :    0
+# KERNEL: ** Report counts by id
+# KERNEL: [DRV]   200
+# KERNEL: [GEN]   200
+# KERNEL: [MON]   200
+# KERNEL: [MON_COV]     1
+# KERNEL: [RNTST]     1
+# KERNEL: [SCO]   601
+# KERNEL: [SCO_COV]     1
+# KERNEL: [TEST_DONE]     1
+# KERNEL: [UVM/RELNOTES]     1
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
+# KERNEL: Time: 17456050 ns,  Iteration: 63,  Instance: /uart_tb,  Process: @INITIAL#348_2@.
+# KERNEL: stopped at time: 17456050 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+acdb save;
+acdb report -db  fcover.acdb -txt -o cov.txt -verbose  
+# ACDB: Coverage report "cov.txt" was generated successfully.
+exec cat cov.txt;
+# +++++++++++++++++++++++++++++++++++++++++++++
+# ++++++++++       REPORT INFO       ++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# SUMMARY
+# ===============================================
+# |     Property     |          Value           |
+# ===============================================
+# | User             | runner                   |
+# | Host             | 6ab179b3cdce             |
+# | Tool             | Riviera-PRO 2025.04      |
+# | Report file      | /home/runner/cov.txt     |
+# | Report date      | 2026-03-30 02:47         |
+# | Report arguments | -verbose                 |
+# | Input file       | /home/runner/fcover.acdb |
+# | Input file date  | 2026-03-30 02:47         |
+# | Number of tests  | 1                        |
+# ===============================================
+# 
+# 
+# TEST DETAILS
+# ==============================================
+# | Property |              Value              |
+# ==============================================
+# | Test     | fcover.acdb:fcover              |
+# | Status   | Ok                              |
+# | Args     | asim +access+r                  |
+# | Simtime  | 17456050 ns                     |
+# | Cputime  | 5.343 s                         |
+# | Seed     | 1                               |
+# | Date     | 2026-03-30 02:47                |
+# | User     | runner                          |
+# | Host     | 6ab179b3cdce                    |
+# | Host os  | Linux64                         |
+# | Tool     | Riviera-PRO 2025.04 (simulator) |
+# ==============================================
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++
+# ++++++++++     DESIGN HIERARCHY    ++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# CUMULATIVE SUMMARY
+# =============================================
+# |    Coverage Type    | Weight | Hits/Total |
+# =============================================
+# | Covergroup Coverage |      1 |    83.333% |
+# |---------------------|--------|------------|
+# | Types               |        |      1 / 2 |
+# =============================================
+# CUMULATIVE INSTANCE-BASED COVERAGE: 83.333%
+# COVERED INSTANCES: 1 / 2
+# FILES: 1
+# 
+# 
+# CLASS - /monitor : work.monitor
+# 
+# 
+#     SUMMARY
+#     =============================================
+#     |    Coverage Type    | Weight | Hits/Total |
+#     =============================================
+#     | Covergroup Coverage |      1 |   100.000% |
+#     |---------------------|--------|------------|
+#     | Types               |        |      1 / 1 |
+#     =============================================
+#     WEIGHTED AVERAGE LOCAL: 100.000%
+# 
+# 
+#     COVERGROUP COVERAGE
+#     =========================================================================================
+#     |                      Covergroup                       |   Hits   |  Goal /  | Status  |
+#     |                                                       |          | At Least |         |
+#     =========================================================================================
+#     | TYPE /monitor/cvg_tx                                  | 100.000% | 100.000% | Covered |
+#     =========================================================================================
+#     | INSTANCE UART_MONITOR_TX_RANGE_COVERED                | 100.000% | 100.000% | Covered |
+#     |-------------------------------------------------------|----------|----------|---------|
+#     | COVERPOINT UART_MONITOR_TX_RANGE_COVERED::TX_RANGE_CP | 100.000% | 100.000% | Covered |
+#     |-------------------------------------------------------|----------|----------|---------|
+#     | bin low                                               |       64 |        1 | Covered |
+#     | bin med                                               |       66 |        1 | Covered |
+#     | bin high                                              |       70 |        1 | Covered |
+#     =========================================================================================
+# 
+# 
+# CLASS - /scoreboard : work.scoreboard
+# 
+# 
+#     SUMMARY
+#     =============================================
+#     |    Coverage Type    | Weight | Hits/Total |
+#     =============================================
+#     | Covergroup Coverage |      1 |    66.666% |
+#     |---------------------|--------|------------|
+#     | Types               |        |      0 / 1 |
+#     =============================================
+#     WEIGHTED AVERAGE LOCAL: 66.666%
+# 
+# 
+#     COVERGROUP COVERAGE
+#     =========================================================================================
+#     |                     Covergroup                      |   Hits   |  Goal /  |  Status   |
+#     |                                                     |          | At Least |           |
+#     =========================================================================================
+#     | TYPE /scoreboard/cvg_tx_rx                          |  66.666% | 100.000% | Uncovered |
+#     =========================================================================================
+#     | INSTANCE UART_SCOREBOARD_MATCH_COVERED              |  66.666% | 100.000% | Uncovered |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::tx_cp     | 100.000% | 100.000% | Covered   |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | bin low                                             |       64 |        1 | Covered   |
+#     | bin med                                             |       66 |        1 | Covered   |
+#     | bin high                                            |       70 |        1 | Covered   |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::match_cp  |  50.000% | 100.000% | Uncovered |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | bin matched                                         |      200 |        1 | Covered   |
+#     | bin mismatched                                      |        0 |        1 | Zero      |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | CROSS UART_SCOREBOARD_MATCH_COVERED::TX_MATCH_CROSS |  50.000% | 100.000% | Uncovered |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | bin <low,matched>                                   |       64 |        1 | Covered   |
+#     | bin <med,matched>                                   |       66 |        1 | Covered   |
+#     | bin <high,matched>                                  |       70 |        1 | Covered   |
+#     =========================================================================================
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++
+# ++++++++++       DESIGN UNITS      ++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# CUMULATIVE SUMMARY
+# =============================================
+# |    Coverage Type    | Weight | Hits/Total |
+# =============================================
+# | Covergroup Coverage |      1 |    83.333% |
+# |---------------------|--------|------------|
+# | Types               |        |      1 / 2 |
+# =============================================
+# CUMULATIVE DESIGN-BASED COVERAGE: 83.333%
+# COVERED DESIGN UNITS: 1 / 2
+# FILES: 1
+# 
+# 
+# CLASS - work.monitor
+# 
+# 
+#     SUMMARY
+#     =============================================
+#     |    Coverage Type    | Weight | Hits/Total |
+#     =============================================
+#     | Covergroup Coverage |      1 |   100.000% |
+#     |---------------------|--------|------------|
+#     | Types               |        |      1 / 1 |
+#     =============================================
+#     WEIGHTED AVERAGE: 100.000%
+# 
+# 
+#     COVERGROUP COVERAGE
+#     =========================================================================================
+#     |                      Covergroup                       |   Hits   |  Goal /  | Status  |
+#     |                                                       |          | At Least |         |
+#     =========================================================================================
+#     | TYPE /monitor/cvg_tx                                  | 100.000% | 100.000% | Covered |
+#     =========================================================================================
+#     | INSTANCE UART_MONITOR_TX_RANGE_COVERED                | 100.000% | 100.000% | Covered |
+#     |-------------------------------------------------------|----------|----------|---------|
+#     | COVERPOINT UART_MONITOR_TX_RANGE_COVERED::TX_RANGE_CP | 100.000% | 100.000% | Covered |
+#     |-------------------------------------------------------|----------|----------|---------|
+#     | bin low                                               |       64 |        1 | Covered |
+#     | bin med                                               |       66 |        1 | Covered |
+#     | bin high                                              |       70 |        1 | Covered |
+#     =========================================================================================
+# 
+# 
+# CLASS - work.scoreboard
+# 
+# 
+#     SUMMARY
+#     =============================================
+#     |    Coverage Type    | Weight | Hits/Total |
+#     =============================================
+#     | Covergroup Coverage |      1 |    66.666% |
+#     |---------------------|--------|------------|
+#     | Types               |        |      0 / 1 |
+#     =============================================
+#     WEIGHTED AVERAGE: 66.666%
+# 
+# 
+#     COVERGROUP COVERAGE
+#     =========================================================================================
+#     |                     Covergroup                      |   Hits   |  Goal /  |  Status   |
+#     |                                                     |          | At Least |           |
+#     =========================================================================================
+#     | TYPE /scoreboard/cvg_tx_rx                          |  66.666% | 100.000% | Uncovered |
+#     =========================================================================================
+#     | INSTANCE UART_SCOREBOARD_MATCH_COVERED              |  66.666% | 100.000% | Uncovered |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::tx_cp     | 100.000% | 100.000% | Covered   |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | bin low                                             |       64 |        1 | Covered   |
+#     | bin med                                             |       66 |        1 | Covered   |
+#     | bin high                                            |       70 |        1 | Covered   |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::match_cp  |  50.000% | 100.000% | Uncovered |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | bin matched                                         |      200 |        1 | Covered   |
+#     | bin mismatched                                      |        0 |        1 | Zero      |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | CROSS UART_SCOREBOARD_MATCH_COVERED::TX_MATCH_CROSS |  50.000% | 100.000% | Uncovered |
+#     |-----------------------------------------------------|----------|----------|-----------|
+#     | bin <low,matched>                                   |       64 |        1 | Covered   |
+#     | bin <med,matched>                                   |       66 |        1 | Covered   |
+#     | bin <high,matched>                                  |       70 |        1 | Covered   |
+#     =========================================================================================
+# 
+exit
+# VSIM: Simulation has finished.
+Finding VCD file...
+./dump.vcd
+[2026-03-30 06:47:31 UTC] Opening EPWave...
+Done
