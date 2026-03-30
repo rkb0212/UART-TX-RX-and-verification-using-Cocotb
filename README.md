@@ -1,4 +1,4 @@
-# UART-TX-RX-and-verification-using-Cocotb
+# UART-TX-RX-and-verification-using-UVM and Cocotb
 The goal of this project was to design and verify a UART transmitter (TX) and receiver (RX) using:
 - RTL (Verilog) for functionality
 - Traditional RTL testbench for initial verification
@@ -33,3 +33,41 @@ Overall, the cocotb tests perform the same logical verification as the original 
 During cocotb-based UART verification, several issues were encountered and resolved. Initially, pip refused to install cocotb due to macOS Homebrew’s externally managed environment (PEP 668). This was fixed by creating and using a Python virtual environment. Next, cocotb failed to install with Python 3.14 because cocotb 2.0.1 only supports up to Python 3.13; installing Python 3.13 and recreating the virtual environment resolved this.
 Build failures occurred due to spaces in the project directory path, which broke Makefile include paths; this was fixed by adjusting the Makefile or using a clean path. A runtime error (vvp: illegal option -- P) occurred because compile-time parameters were incorrectly passed to vvp; moving them to IVERILOG_ARGS corrected this.
 Additional issues arose from cocotb 2.x API changes, such as invalid use of .integer and cocotb.result.TestFailure; these were fixed by using int(signal.value), standard Python exceptions, and updated Clock arguments. Finally, random UART tests intermittently failed due to missed one-cycle o_rx_dv pulses and TX busy conditions. This was debugged by improving DV detection, increasing timeouts, and ultimately fixed by adding a proper TX-idle handshake using o_tx_active, making the cocotb driver robust and reliable.
+# UVM-Based Verification of UART TX/RX
+To enable scalable and reusable verification beyond traditional RTL and cocotb testing, a complete UVM (Universal Verification Methodology) testbench was developed for the UART loopback design. This environment verifies end-to-end correctness of UART transmission and reception under directed, constrained-random, and corner-case scenarios.
+
+Transaction (Sequence Item)
+The transaction class represents the fundamental data unit used in the UART verification environment. In this design, each transaction corresponds to an 8-bit data byte that needs to be transmitted through the UART transmitter and received by the UART receiver. The class is defined as a uvm_sequence_item, allowing it to be randomized and passed through the UVM stimulus flow. Constrained-random generation is applied within this class to ensure comprehensive testing, including biasing toward important corner cases such as 0x00, 0xFF, and common patterns like 0xAA and 0x55. By abstracting the data into a transaction, the testbench separates stimulus generation from signal-level implementation, making the environment scalable and reusable.
+
+Sequence (Stimulus Generation)
+The sequence is responsible for generating a stream of transactions that will be applied to the DUT. It creates both directed and randomized test scenarios, including corner cases and normal operating values. The sequence sends these transactions to the sequencer, which then forwards them to the driver. This abstraction allows different test scenarios to be implemented easily without modifying the driver or lower-level components. For example, sequences can be designed for single-byte transmission, multiple random bytes, or stress testing using back-to-back transfers. This flexibility is essential for achieving thorough verification coverage.
+
+Sequencer
+The sequencer acts as an intermediary between the sequence and the driver. It receives transactions from the sequence and provides them to the driver in an organized manner. Although simple in functionality, the sequencer plays a crucial role in decoupling stimulus generation from stimulus application. This separation ensures that the same driver can be reused with different sequences, improving modularity and scalability of the verification environment.
+
+Driver (Stimulus Application)
+The driver converts high-level transactions into low-level signal activity on the DUT interface. For the UART design, it drives signals such as i_tx_dv and i_tx_byte to initiate transmission. The driver ensures proper protocol timing by asserting the valid signal for one clock cycle and waiting for the transmitter to complete the operation (o_tx_done). It also supports advanced behaviors such as inserting random delays between transactions and generating back-to-back transfers with no idle cycles. Additionally, controlled error injection can be implemented in the driver to intentionally introduce mismatches, allowing validation of the scoreboard’s error detection capability. The driver is therefore responsible for accurately modeling real-world stimulus behavior.
+
+Monitor (Observation)
+The monitor passively observes the DUT outputs without influencing its behavior. It continuously samples signals such as o_rx_dv and o_rx_byte to detect when a valid byte has been received. Once a valid reception is detected, the monitor reconstructs the observed data into a transaction object and sends it to the scoreboard. This non-intrusive observation mechanism ensures that the verification environment does not interfere with DUT operation while still capturing all relevant output activity.
+
+Scoreboard (Checking Mechanism)
+The scoreboard is responsible for verifying correctness by comparing expected and actual results. It receives the expected transmitted data from the driver and the actual received data from the monitor. Using a queue-based comparison mechanism, it checks whether each received byte matches the corresponding transmitted byte. Any mismatch is flagged as a failure, while correct matches are recorded as passes. The scoreboard also maintains statistics such as total transactions, pass count, and fail count, providing a clear summary of verification results. This component is critical for validating functional correctness of the UART communication.
+
+Agent
+The agent encapsulates the sequencer, driver, and monitor into a single reusable unit. It represents the UART interface from the verification perspective and manages all stimulus generation and observation related to that interface. By grouping these components together, the agent simplifies the environment structure and enables reuse of the entire protocol verification logic in larger system-level designs.
+
+Environment (env)
+The environment serves as the top-level container for all verification components. It instantiates the agent and the scoreboard and connects them appropriately. Specifically, it ensures that the driver’s transmitted data is forwarded to the scoreboard as expected data, while the monitor’s observed data is also sent to the scoreboard as actual data. This central coordination ensures that all components interact correctly and that verification results are properly evaluated.
+
+Test
+The test class controls the overall execution of the verification environment. It configures the environment, initializes components, and starts the desired sequence. The test defines how many transactions to run and what type of stimulus should be applied (e.g., random, directed, or stress testing). It also manages simulation phases and ensures that the test runs to completion. By modifying the test class, different verification scenarios can be executed without changing the underlying environment.
+
+Interface (DUT Connectivity + Assertions)
+The interface provides a structured connection between the UVM testbench and the DUT. It includes all necessary input and output signals such as i_tx_dv, i_tx_byte, o_tx_serial, o_rx_dv, and o_rx_byte. In addition to signal connectivity, the interface also includes SystemVerilog Assertions (SVA) to validate protocol-level behavior. These assertions check conditions such as correct start-bit generation, proper transmission timing, and valid handshake behavior. Embedding assertions in the interface ensures that protocol violations are detected immediately during simulation, improving debugging efficiency and verification quality.
+
+Functional Coverage
+Functional coverage is implemented using covergroups to ensure that all important scenarios are exercised during simulation. Coverage points are defined for transmitted data values, with specific bins for corner cases such as 0x00 and 0xFF, as well as ranges for general values. This allows tracking of how thoroughly the input space has been explored. Coverage-driven verification ensures that testing is not only correct but also complete, providing confidence in the robustness of the UART design.
+
+Overall Verification Flow
+The verification process begins with the sequence generating transactions, which are passed through the sequencer to the driver. The driver applies these transactions to the DUT by driving the appropriate signals. The UART transmitter converts the data into a serial stream, which is looped back to the receiver. The monitor observes the receiver output and reconstructs the received data, which is then sent to the scoreboard. The scoreboard compares expected and actual values, while assertions check protocol correctness and coverage tracks test completeness. This end-to-end flow ensures that both functional correctness and protocol behavior are thoroughly verified.
