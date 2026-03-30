@@ -1,26 +1,1279 @@
-# KERNEL: UVM_INFO /home/runner/testbench.sv(31) @ 17285350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :171 
-# KERNEL: UVM_INFO /home/runner/testbench.sv(81) @ 17285550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 171
-# KERNEL: UVM_INFO /home/runner/testbench.sv(196) @ 17285550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 171
-# KERNEL: UVM_INFO /home/runner/testbench.sv(138) @ 17368750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 171
-# KERNEL: UVM_INFO /home/runner/testbench.sv(216) @ 17368750: uvm_test_top.e.s [SCO] Compare Expected: 171 Actual: 171
-# KERNEL: UVM_INFO /home/runner/testbench.sv(219) @ 17368750: uvm_test_top.e.s [SCO] Test Passed
-# KERNEL: UVM_INFO /home/runner/testbench.sv(31) @ 17372650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :102 
-# KERNEL: UVM_INFO /home/runner/testbench.sv(81) @ 17372850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 102
-# KERNEL: UVM_INFO /home/runner/testbench.sv(196) @ 17372850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 102
-# KERNEL: UVM_INFO /home/runner/testbench.sv(138) @ 17456050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 102
-# KERNEL: UVM_INFO /home/runner/testbench.sv(216) @ 17456050: uvm_test_top.e.s [SCO] Compare Expected: 102 Actual: 102
-# KERNEL: UVM_INFO /home/runner/testbench.sv(219) @ 17456050: uvm_test_top.e.s [SCO] Test Passed
-# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_objection.svh(1271) @ 17456050: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# KERNEL: UVM_INFO /home/runner/testbench.sv(128) @ 17456050: uvm_test_top.e.a.m [MON_COV] Covergroup UART_MONITOR_TX_RANGE_COVERED coverage = 100.00%
-# KERNEL: UVM_INFO /home/runner/testbench.sv(233) @ 17456050: uvm_test_top.e.s [SCO] PASS=200 FAIL=0 PENDING=0
-# KERNEL: UVM_INFO /home/runner/testbench.sv(234) @ 17456050: uvm_test_top.e.s [SCO_COV] Covergroup UART_SCOREBOARD_MATCH_COVERED coverage = 66.67%
-# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_report_server.svh(869) @ 17456050: reporter [UVM/REPORT/SERVER] 
+[2026-03-30 19:48:10 UTC] vlib work && vlog '-timescale' '1ns/1ns' +incdir+$RIVIERA_HOME/vlib/uvm-1.2/src -l uvm_1_2 -err VCP2947 W9 -err VCP2974 W9 -err VCP3003 W9 -err VCP5417 W9 -err VCP6120 W9 -err VCP7862 W9 -err VCP2129 W9 design.sv testbench.sv  && vsim -c -do run.do 
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = ./work/work.lib
+MESSAGE_SP VCP2124 "Package uvm_pkg found in library uvm_1_2."
+MESSAGE "ASRT_7002: Due to optimizations some assertions from source code will be evaluated in non LRM complaint mode. Use switch -ao_off to turn off this optimization."
+MESSAGE "Unit top modules: uart_tb."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 7[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2025.04.139.9738 built for Linux64 on May 30, 2025.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2025 Aldec, Inc. All rights reserved.
+vsim +access+r;
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "uvm_pkg" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.8 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Info: Loading library:  /usr/share/Riviera-PRO/bin/uvm_1_2_dpi
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 10 (55.56%) other processes in SLP
+# SLP: 47 (0.15%) signals in SLP and 16 (0.05%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 29731 kB (elbread=2098 elab2=22837 kernel=4795 sdf=0)
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: UVM-1.2
+# KERNEL: (C) 2007-2014 Mentor Graphics Corporation
+# KERNEL: (C) 2007-2014 Cadence Design Systems, Inc.
+# KERNEL: (C) 2006-2014 Synopsys, Inc.
+# KERNEL: (C) 2011-2013 Cypress Semiconductor Corp.
+# KERNEL: (C) 2013-2014 NVIDIA Corporation
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: 
+# KERNEL:   ***********       IMPORTANT RELEASE NOTES         ************
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_NO_DEPRECATED undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# KERNEL: 
+# KERNEL:       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# KERNEL: 
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+run -all;
+# KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test test...
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 0: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 1
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 83350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 83350: uvm_test_top.e.s [SCO] Compare Expected: 1 Actual: 0
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 83350: uvm_test_top.e.s [SCO] Test Failed: Expected 1 Actual 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 88050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 88250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 88250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 171450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 171450: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 171450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 175850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :10 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 176050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 10
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 176050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 10
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 259250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 10
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 259250: uvm_test_top.e.s [SCO] Compare Expected: 10 Actual: 10
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 259250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 265150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :110 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 265350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 110
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 265350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 110
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 348550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 110
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 348550: uvm_test_top.e.s [SCO] Compare Expected: 110 Actual: 110
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 348550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 353250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 353450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 353450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 436650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 436650: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 436650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 441150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :162 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 441350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 162
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 441350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 162
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 524550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 162
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 524550: uvm_test_top.e.s [SCO] Compare Expected: 162 Actual: 162
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 524550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 530450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 530650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 530650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 613850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 613850: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 613850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 618150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :140 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 618350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 140
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 618350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 140
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 701550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 140
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 701550: uvm_test_top.e.s [SCO] Compare Expected: 140 Actual: 140
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 701550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 705550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :105 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 705750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 105
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 705750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 105
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 788950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 105
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 788950: uvm_test_top.e.s [SCO] Compare Expected: 105 Actual: 105
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 788950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 793350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :158 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 793550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 793550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 876750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 876750: uvm_test_top.e.s [SCO] Compare Expected: 158 Actual: 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 876750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 882450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 882650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 882650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 965850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 965850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 965850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 971650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :101 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 971850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 101
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 971850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 101
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1055050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 101
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1055050: uvm_test_top.e.s [SCO] Compare Expected: 101 Actual: 101
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1055050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1060950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1061150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1061150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1144350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1144350: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1144350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1149850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :155 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1150050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 155
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1150050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 155
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1233250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 155
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1233250: uvm_test_top.e.s [SCO] Compare Expected: 155 Actual: 155
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1233250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1237250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :149 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1237450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 149
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1237450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 149
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1320650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 149
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1320650: uvm_test_top.e.s [SCO] Compare Expected: 149 Actual: 149
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1320650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1325750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1325950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1325950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1409150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1409150: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1409150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1413650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1413850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1413850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1497050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1497050: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1497050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1500950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1501150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1501150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1584350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1584350: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1584350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1590050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1590250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1590250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1673450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1673450: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1673450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1677650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1677850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1677850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1761050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1761050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1761050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1765150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1765350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1765350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1848550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1848550: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1848550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1852750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :240 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1852950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 240
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1852950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 240
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 1936150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 240
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 1936150: uvm_test_top.e.s [SCO] Compare Expected: 240 Actual: 240
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 1936150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 1940850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :8 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 1941050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 8
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 1941050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 8
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2024250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 8
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2024250: uvm_test_top.e.s [SCO] Compare Expected: 8 Actual: 8
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2024250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2030150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :73 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2030350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 73
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2030350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 73
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2113550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 73
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2113550: uvm_test_top.e.s [SCO] Compare Expected: 73 Actual: 73
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2113550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2118050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2118250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2118250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2201450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2201450: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2201450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2206650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :205 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2206850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 205
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2206850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 205
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2290050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 205
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2290050: uvm_test_top.e.s [SCO] Compare Expected: 205 Actual: 205
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2290050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2295250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :215 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2295450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 215
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2295450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 215
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2378650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 215
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2378650: uvm_test_top.e.s [SCO] Compare Expected: 215 Actual: 215
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2378650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2382750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :214 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2382950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2382950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2466150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2466150: uvm_test_top.e.s [SCO] Compare Expected: 214 Actual: 214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2466150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2471050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :141 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2471250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 141
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2471250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 141
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2554450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 141
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2554450: uvm_test_top.e.s [SCO] Compare Expected: 141 Actual: 141
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2554450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2559450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2559650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2559650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2642850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2642850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2642850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2647950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2648150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2648150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2731350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2731350: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2731350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2735950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2736150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2736150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2819350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2819350: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2819350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2824050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2824250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2824250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2907450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2907450: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2907450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 2912350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 2912550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 2912550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 2995750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 2995750: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 2995750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3001550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3001750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3001750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3084950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3084950: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3084950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3089150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3089350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3089350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3172550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3172550: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3172550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3177850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3178050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3178050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3261250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3261250: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3261250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3265150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :2 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3265350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3265350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3348550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3348550: uvm_test_top.e.s [SCO] Compare Expected: 2 Actual: 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3348550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3352850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3353050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3353050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 1
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3436250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3436250: uvm_test_top.e.s [SCO] Compare Expected: 1 Actual: 0
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 3436250: uvm_test_top.e.s [SCO] Test Failed: Expected 1 Actual 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3441250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3441450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3441450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3524650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3524650: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3524650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3528550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3528750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3528750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3611950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3611950: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3611950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3616650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3616850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3616850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3700050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3700050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3700050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3704750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :145 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3704950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 145
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3704950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 145
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3788150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 145
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3788150: uvm_test_top.e.s [SCO] Compare Expected: 145 Actual: 145
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3788150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3792450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3792650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3792650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3875850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3875850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3875850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3881650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3881850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3881850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 3965050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 3965050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 3965050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 3969250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :26 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 3969450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 26
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 3969450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 26
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4052650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 26
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4052650: uvm_test_top.e.s [SCO] Compare Expected: 26 Actual: 26
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4052650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4056850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4057050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4057050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4140250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4140250: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4140250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4144350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4144550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4144550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4227750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4227750: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4227750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4233050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :210 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4233250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 210
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4233250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 210
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4316450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 210
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4316450: uvm_test_top.e.s [SCO] Compare Expected: 210 Actual: 210
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4316450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4321350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4321550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4321550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4404750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4404750: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4404750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4410150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :55 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4410350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4410350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4493550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4493550: uvm_test_top.e.s [SCO] Compare Expected: 55 Actual: 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4493550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4497650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4497850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4497850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4581050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4581050: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4581050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4586350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4586550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4586550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4669750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4669750: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4669750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4674350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4674550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4674550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4757750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4757750: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4757750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4763050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :221 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4763250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 221
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4763250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 221
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4846450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 221
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4846450: uvm_test_top.e.s [SCO] Compare Expected: 221 Actual: 221
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4846450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4851550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :42 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4851750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 42
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4851750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 42
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 4934950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 42
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 4934950: uvm_test_top.e.s [SCO] Compare Expected: 42 Actual: 42
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 4934950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 4940450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 4940650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 4940650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5023850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5023850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5023850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5028850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :45 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5029050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 45
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5029050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 45
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5112250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 45
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5112250: uvm_test_top.e.s [SCO] Compare Expected: 45 Actual: 45
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5112250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5116650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5116850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5116850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5200050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5200050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5200050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5205650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5205850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5205850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5289050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5289050: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5289050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5294150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :19 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5294350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 19
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5294350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 19
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5377550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 19
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5377550: uvm_test_top.e.s [SCO] Compare Expected: 19 Actual: 19
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5377550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5382150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5382350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5382350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5465550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5465550: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5465550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5469850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :31 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5470050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 31
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5470050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 31
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5553250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 31
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5553250: uvm_test_top.e.s [SCO] Compare Expected: 31 Actual: 31
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5553250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5558650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5558850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5558850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5642050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5642050: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5642050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5646750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :92 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5646950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 92
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5646950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 92
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5730150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 92
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5730150: uvm_test_top.e.s [SCO] Compare Expected: 92 Actual: 92
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5730150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5734150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5734350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5734350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5817550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5817550: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5817550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5821450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5821650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5821650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5904850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5904850: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5904850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5908750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :46 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5908950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5908950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 5992150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 5992150: uvm_test_top.e.s [SCO] Compare Expected: 46 Actual: 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 5992150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 5997750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 5997950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 5997950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6081150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6081150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6081150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6086950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :98 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6087150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 98
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6087150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 98
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6170350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 98
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6170350: uvm_test_top.e.s [SCO] Compare Expected: 98 Actual: 98
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6170350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6174650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6174850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6174850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6258050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6258050: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6258050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6262750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6262950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6262950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6346150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6346150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6346150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6351350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6351550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6351550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6434750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6434750: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6434750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6439650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :80 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6439850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 80
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6439850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 80
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6523050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 80
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6523050: uvm_test_top.e.s [SCO] Compare Expected: 80 Actual: 80
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6523050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6527350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :50 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6527550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 50
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6527550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 50
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6610750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 50
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6610750: uvm_test_top.e.s [SCO] Compare Expected: 50 Actual: 50
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6610750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6615450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6615650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6615650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6698850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6698850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6698850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6702950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6703150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6703150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6786350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6786350: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6786350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6790250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6790450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6790450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6873650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6873650: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6873650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6878150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6878350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6878350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 6961550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 6961550: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 6961550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 6966250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 6966450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 6966450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7049650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7049650: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7049650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7055550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7055750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7055750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7138950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7138950: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7138950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7143350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7143550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7143550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7226750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7226750: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7226750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7231950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7232150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7232150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7315350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7315350: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7315350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7319550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :158 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7319750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7319750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7402950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7402950: uvm_test_top.e.s [SCO] Compare Expected: 158 Actual: 158
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7402950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7408750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7408950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7408950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7492150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7492150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7492150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7496850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7497050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7497050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7580250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7580250: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7580250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7584550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7584750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7584750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7667950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7667950: uvm_test_top.e.s [SCO] Compare Expected: 171 Actual: 170
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 7667950: uvm_test_top.e.s [SCO] Test Failed: Expected 171 Actual 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7671850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :216 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7672050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7672050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7755250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7755250: uvm_test_top.e.s [SCO] Compare Expected: 216 Actual: 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7755250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7760050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :185 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7760250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7760250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7843450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7843450: uvm_test_top.e.s [SCO] Compare Expected: 185 Actual: 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7843450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7848350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7848550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7848550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 7931750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 7931750: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 7931750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 7936950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 7937150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 7937150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 254
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8020350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8020350: uvm_test_top.e.s [SCO] Compare Expected: 254 Actual: 255
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 8020350: uvm_test_top.e.s [SCO] Test Failed: Expected 254 Actual 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8026150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :150 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8026350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 150
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8026350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 150
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8109550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 150
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8109550: uvm_test_top.e.s [SCO] Compare Expected: 150 Actual: 150
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8109550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8114550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8114750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8114750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8197950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8197950: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8197950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8203750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :252 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8203950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 252
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8203950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 252
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8287150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 252
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8287150: uvm_test_top.e.s [SCO] Compare Expected: 252 Actual: 252
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8287150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8291950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :39 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8292150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 39
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8292150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 39
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8375350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 39
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8375350: uvm_test_top.e.s [SCO] Compare Expected: 39 Actual: 39
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8375350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8380550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8380750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8380750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8463950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8463950: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8463950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8468350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :2 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8468550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8468550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8551750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8551750: uvm_test_top.e.s [SCO] Compare Expected: 2 Actual: 2
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8551750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8557450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8557650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8557650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8640850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8640850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8640850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8645250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :234 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8645450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 234
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8645450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 234
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8728650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 234
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8728650: uvm_test_top.e.s [SCO] Compare Expected: 234 Actual: 234
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8728650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8733750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :14 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8733950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 14
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8733950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 14
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8817150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 14
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8817150: uvm_test_top.e.s [SCO] Compare Expected: 14 Actual: 14
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8817150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8822550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :86 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8822750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 86
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8822750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 86
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8905950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 86
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8905950: uvm_test_top.e.s [SCO] Compare Expected: 86 Actual: 86
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8905950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8910950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :193 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 8911150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 193
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 8911150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 193
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 8994350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 193
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 8994350: uvm_test_top.e.s [SCO] Compare Expected: 193 Actual: 193
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 8994350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 8999950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :78 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9000150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 78
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9000150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 78
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9083350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 78
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9083350: uvm_test_top.e.s [SCO] Compare Expected: 78 Actual: 78
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9083350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9089250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9089450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9089450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9172650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9172650: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9172650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9178250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :216 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9178450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9178450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9261650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9261650: uvm_test_top.e.s [SCO] Compare Expected: 216 Actual: 216
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9261650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9265750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9265950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9265950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9349150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9349150: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9349150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9353650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :24 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9353850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 24
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9353850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 24
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9437050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 24
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9437050: uvm_test_top.e.s [SCO] Compare Expected: 24 Actual: 24
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9437050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9442450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9442650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9442650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9525850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9525850: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9525850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9530550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9530750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9530750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9613950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9613950: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9613950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9619650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9619850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9619850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9703050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9703050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9703050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9706950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9707150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9707150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9790350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9790350: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9790350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9794350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9794550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9794550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9877750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9877750: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9877750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9882050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :120 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9882250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 120
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9882250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 120
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 9965450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 120
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 9965450: uvm_test_top.e.s [SCO] Compare Expected: 120 Actual: 120
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 9965450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 9969550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 9969750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 9969750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10052950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10052950: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10052950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10057050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :55 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10057250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10057250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10140450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10140450: uvm_test_top.e.s [SCO] Compare Expected: 55 Actual: 55
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10140450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10146050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :51 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10146250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 51
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10146250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 51
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10229450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 51
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10229450: uvm_test_top.e.s [SCO] Compare Expected: 51 Actual: 51
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10229450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10234250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10234450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10234450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10317650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10317650: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10317650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10322150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10322350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10322350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10405550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10405550: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10405550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10410250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10410450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10410450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10493650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10493650: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10493650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10499450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10499650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10499650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10582850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10582850: uvm_test_top.e.s [SCO] Compare Expected: 171 Actual: 170
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 10582850: uvm_test_top.e.s [SCO] Test Failed: Expected 171 Actual 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10587650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :218 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10587850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 218
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10587850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 218
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10671050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 218
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10671050: uvm_test_top.e.s [SCO] Compare Expected: 218 Actual: 218
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10671050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10676450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :238 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10676650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 238
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10676650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 238
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10759850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 238
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10759850: uvm_test_top.e.s [SCO] Compare Expected: 238 Actual: 238
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10759850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10764550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :44 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10764750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 44
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10764750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 44
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10847950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 44
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10847950: uvm_test_top.e.s [SCO] Compare Expected: 44 Actual: 44
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10847950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10852750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10852950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10852950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 10936150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 10936150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 10936150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 10941350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 10941550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 10941550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11024750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11024750: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11024750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11030250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :95 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11030450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 95
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11030450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 95
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11113650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 95
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11113650: uvm_test_top.e.s [SCO] Compare Expected: 95 Actual: 95
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11113650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11118450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :167 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11118650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 167
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11118650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 166
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11201850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 167
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11201850: uvm_test_top.e.s [SCO] Compare Expected: 166 Actual: 167
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 11201850: uvm_test_top.e.s [SCO] Test Failed: Expected 166 Actual 167
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11207250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11207450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11207450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11290650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11290650: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11290650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11294550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :33 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11294750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 33
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11294750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 33
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11377950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 33
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11377950: uvm_test_top.e.s [SCO] Compare Expected: 33 Actual: 33
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11377950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11382750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11382950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11382950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11466150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11466150: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11466150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11470750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11470950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11470950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11554150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11554150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11554150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11558950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11559150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11559150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11642350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11642350: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11642350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11646450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11646650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11646650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11729850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11729850: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11729850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11735250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11735450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11735450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11818650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11818650: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11818650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11823150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :227 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11823350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 227
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11823350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 227
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11906550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 227
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11906550: uvm_test_top.e.s [SCO] Compare Expected: 227 Actual: 227
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11906550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 11911150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :217 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 11911350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 217
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 11911350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 217
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 11994550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 217
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 11994550: uvm_test_top.e.s [SCO] Compare Expected: 217 Actual: 217
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 11994550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12000050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12000250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12000250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12083450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12083450: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12083450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12088950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :30 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12089150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 30
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12089150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 30
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12172350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 30
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12172350: uvm_test_top.e.s [SCO] Compare Expected: 30 Actual: 30
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12172350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12176750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12176950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12176950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12260150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12260150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12260150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12264850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12265050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12265050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12348250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12348250: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12348250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12352650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12352850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12352850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12436050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12436050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12436050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12439950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :48 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12440150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 48
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12440150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 49
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12523350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 48
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12523350: uvm_test_top.e.s [SCO] Compare Expected: 49 Actual: 48
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 12523350: uvm_test_top.e.s [SCO] Test Failed: Expected 49 Actual 48
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12528050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12528250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12528250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12611450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12611450: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12611450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12615450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12615650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12615650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12698850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12698850: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12698850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12704650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12704850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12704850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12788050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12788050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12788050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12792150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :118 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12792350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 118
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12792350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 118
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12875550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 118
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12875550: uvm_test_top.e.s [SCO] Compare Expected: 118 Actual: 118
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12875550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12879550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12879750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12879750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 12962950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 12962950: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 12962950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 12968450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :232 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 12968650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 232
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 12968650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 232
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13051850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 232
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13051850: uvm_test_top.e.s [SCO] Compare Expected: 232 Actual: 232
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13051850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13057550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13057750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13057750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13140950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13140950: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13140950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13145650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13145850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13145850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13229050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13229050: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13229050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13233150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13233350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13233350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13316550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13316550: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13316550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13320550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13320750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13320750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 171
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13403950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13403950: uvm_test_top.e.s [SCO] Compare Expected: 171 Actual: 170
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 13403950: uvm_test_top.e.s [SCO] Test Failed: Expected 171 Actual 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13409550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :249 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13409750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 249
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13409750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 249
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13492950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 249
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13492950: uvm_test_top.e.s [SCO] Compare Expected: 249 Actual: 249
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13492950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13497150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13497350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13497350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13580550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13580550: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13580550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13585950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :223 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13586150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13586150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13669350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13669350: uvm_test_top.e.s [SCO] Compare Expected: 223 Actual: 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13669350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13673550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13673750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13673750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13756950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13756950: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13756950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13760950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13761150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13761150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13844350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13844350: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13844350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13848450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :248 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13848650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 248
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13848650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 248
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 13931850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 248
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 13931850: uvm_test_top.e.s [SCO] Compare Expected: 248 Actual: 248
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 13931850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 13935850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :229 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 13936050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 229
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 13936050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 229
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14019250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 229
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14019250: uvm_test_top.e.s [SCO] Compare Expected: 229 Actual: 229
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14019250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14023150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :1 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14023350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 1
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14023350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 1
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14106550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 1
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14106550: uvm_test_top.e.s [SCO] Compare Expected: 1 Actual: 1
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14106550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14110750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14110950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14110950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14194150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14194150: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14194150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14199750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :166 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14199950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 166
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14199950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 166
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14283150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 166
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14283150: uvm_test_top.e.s [SCO] Compare Expected: 166 Actual: 166
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14283150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14288950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14289150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14289150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14372350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14372350: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14372350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14377650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :206 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14377850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 206
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14377850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 206
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14461050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 206
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14461050: uvm_test_top.e.s [SCO] Compare Expected: 206 Actual: 206
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14461050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14465050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14465250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14465250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14548450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14548450: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14548450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14553250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14553450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14553450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14636650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14636650: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14636650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14642250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :36 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14642450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 36
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14642450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 36
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14725650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 36
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14725650: uvm_test_top.e.s [SCO] Compare Expected: 36 Actual: 36
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14725650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14729750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :185 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14729950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14729950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14813150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14813150: uvm_test_top.e.s [SCO] Compare Expected: 185 Actual: 185
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14813150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14818850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14819050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14819050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14902250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14902250: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14902250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14907950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :125 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14908150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 125
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14908150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 125
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 14991350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 125
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 14991350: uvm_test_top.e.s [SCO] Compare Expected: 125 Actual: 125
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 14991350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 14995650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 14995850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 14995850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15079050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15079050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15079050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15084950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :85 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15085150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15085150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15168350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15168350: uvm_test_top.e.s [SCO] Compare Expected: 85 Actual: 85
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15168350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15174150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15174350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15174350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15257550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15257550: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15257550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15262050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15262250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15262250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15345450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15345450: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15345450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15350950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15351150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15351150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15434350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15434350: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15434350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15439350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :242 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15439550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 242
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15439550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 243
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15522750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 242
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15522750: uvm_test_top.e.s [SCO] Compare Expected: 243 Actual: 242
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 15522750: uvm_test_top.e.s [SCO] Test Failed: Expected 243 Actual 242
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15527950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15528150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15528150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15611350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15611350: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15611350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15616050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15616250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15616250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15699450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15699450: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15699450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15703350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15703550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15703550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15786750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15786750: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15786750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15791550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15791750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15791750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15874950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15874950: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15874950: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15878850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15879050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15879050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 15962250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 15962250: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 15962250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 15966350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :49 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 15966550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 49
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 15966550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 49
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16049750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 49
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16049750: uvm_test_top.e.s [SCO] Compare Expected: 49 Actual: 49
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16049750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16054450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :135 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16054650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 135
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16054650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 135
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16137850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 135
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16137850: uvm_test_top.e.s [SCO] Compare Expected: 135 Actual: 135
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16137850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16143350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16143550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16143550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16226750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16226750: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16226750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16232650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :207 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16232850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 207
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16232850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 207
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16316050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 207
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16316050: uvm_test_top.e.s [SCO] Compare Expected: 207 Actual: 207
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16316050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16321950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :173 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16322150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16322150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16405350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16405350: uvm_test_top.e.s [SCO] Compare Expected: 173 Actual: 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16405350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16410350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :223 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16410550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16410550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16493750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16493750: uvm_test_top.e.s [SCO] Compare Expected: 223 Actual: 223
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16493750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16497650: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16497850: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16497850: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16581050: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16581050: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16581050: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16586850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :46 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16587050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16587050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16670250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16670250: uvm_test_top.e.s [SCO] Compare Expected: 46 Actual: 46
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16670250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16674150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :170 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16674350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16674350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16757550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16757550: uvm_test_top.e.s [SCO] Compare Expected: 170 Actual: 170
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16757550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16761550: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16761750: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16761750: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 254
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16844950: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16844950: uvm_test_top.e.s [SCO] Compare Expected: 254 Actual: 255
+# KERNEL: UVM_ERROR /home/runner/testbench.sv(249) @ 16844950: uvm_test_top.e.s [SCO] Test Failed: Expected 254 Actual 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16848850: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :15 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16849050: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 15
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16849050: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 15
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 16932250: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 15
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 16932250: uvm_test_top.e.s [SCO] Compare Expected: 15 Actual: 15
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 16932250: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 16936450: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 16936650: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 16936650: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17019850: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17019850: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17019850: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17024350: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :143 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17024550: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 143
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17024550: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 143
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17107750: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 143
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17107750: uvm_test_top.e.s [SCO] Compare Expected: 143 Actual: 143
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17107750: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17112050: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :201 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17112250: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 201
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17112250: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 201
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17195450: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 201
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17195450: uvm_test_top.e.s [SCO] Compare Expected: 201 Actual: 201
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17195450: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17200950: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :173 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17201150: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17201150: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17284350: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17284350: uvm_test_top.e.s [SCO] Compare Expected: 173 Actual: 173
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17284350: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17290250: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :255 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17290450: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17290450: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17373650: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17373650: uvm_test_top.e.s [SCO] Compare Expected: 255 Actual: 255
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17373650: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17377750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :225 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17377950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 225
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17377950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 225
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17461150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 225
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17461150: uvm_test_top.e.s [SCO] Compare Expected: 225 Actual: 225
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17461150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17466150: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :99 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17466350: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 99
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17466350: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 99
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17549550: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 99
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17549550: uvm_test_top.e.s [SCO] Compare Expected: 99 Actual: 99
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17549550: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 17553750: uvm_test_top.e.a.seqr@@gen [GEN] Data send to Driver i_tx_byte :0 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 17553950: uvm_test_top.e.a.d [DRV] Trigger DUT tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(222) @ 17553950: uvm_test_top.e.s [SCO] Expected queued i_tx_byte: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(164) @ 17637150: uvm_test_top.e.a.m [MON] Data send to Scoreboard i_tx_byte : 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(242) @ 17637150: uvm_test_top.e.s [SCO] Compare Expected: 0 Actual: 0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(245) @ 17637150: uvm_test_top.e.s [SCO] Test Passed
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_objection.svh(1271) @ 17637150: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/runner/testbench.sv(150) @ 17637150: uvm_test_top.e.a.m [MON_COV] Covergroup UART_MONITOR_TX_RANGE_COVERED coverage = 100.00%
+# KERNEL: UVM_INFO /home/runner/testbench.sv(259) @ 17637150: uvm_test_top.e.s [SCO] PASS=190 FAIL=10 PENDING=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(260) @ 17637150: uvm_test_top.e.s [SCO_COV] Covergroup UART_SCOREBOARD_MATCH_COVERED coverage = 100.00%
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_report_server.svh(869) @ 17637150: reporter [UVM/REPORT/SERVER] 
 # KERNEL: --- UVM Report Summary ---
 # KERNEL: 
 # KERNEL: ** Report counts by severity
-# KERNEL: UVM_INFO : 1206
+# KERNEL: UVM_INFO : 1196
 # KERNEL: UVM_WARNING :    0
-# KERNEL: UVM_ERROR :    0
+# KERNEL: UVM_ERROR :   10
 # KERNEL: UVM_FATAL :    0
 # KERNEL: ** Report counts by id
 # KERNEL: [DRV]   200
@@ -34,8 +1287,8 @@
 # KERNEL: [UVM/RELNOTES]     1
 # KERNEL: 
 # RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
-# KERNEL: Time: 17456050 ns,  Iteration: 63,  Instance: /uart_tb,  Process: @INITIAL#348_2@.
-# KERNEL: stopped at time: 17456050 ns
+# KERNEL: Time: 17637150 ns,  Iteration: 63,  Instance: /uart_tb,  Process: @INITIAL#374_2@.
+# KERNEL: stopped at time: 17637150 ns
 # VSIM: Simulation has finished. There are no more test vectors to simulate.
 acdb save;
 acdb report -db  fcover.acdb -txt -o cov.txt -verbose  
@@ -51,13 +1304,13 @@ exec cat cov.txt;
 # |     Property     |          Value           |
 # ===============================================
 # | User             | runner                   |
-# | Host             | 6ab179b3cdce             |
+# | Host             | 23ee8134042f             |
 # | Tool             | Riviera-PRO 2025.04      |
 # | Report file      | /home/runner/cov.txt     |
-# | Report date      | 2026-03-30 02:47         |
+# | Report date      | 2026-03-30 15:48         |
 # | Report arguments | -verbose                 |
 # | Input file       | /home/runner/fcover.acdb |
-# | Input file date  | 2026-03-30 02:47         |
+# | Input file date  | 2026-03-30 15:48         |
 # | Number of tests  | 1                        |
 # ===============================================
 # 
@@ -67,14 +1320,14 @@ exec cat cov.txt;
 # | Property |              Value              |
 # ==============================================
 # | Test     | fcover.acdb:fcover              |
-# | Status   | Ok                              |
+# | Status   | Error                           |
 # | Args     | asim +access+r                  |
-# | Simtime  | 17456050 ns                     |
-# | Cputime  | 5.343 s                         |
+# | Simtime  | 17637150 ns                     |
+# | Cputime  | 9.622 s                         |
 # | Seed     | 1                               |
-# | Date     | 2026-03-30 02:47                |
+# | Date     | 2026-03-30 15:48                |
 # | User     | runner                          |
-# | Host     | 6ab179b3cdce                    |
+# | Host     | 23ee8134042f                    |
 # | Host os  | Linux64                         |
 # | Tool     | Riviera-PRO 2025.04 (simulator) |
 # ==============================================
@@ -89,12 +1342,12 @@ exec cat cov.txt;
 # =============================================
 # |    Coverage Type    | Weight | Hits/Total |
 # =============================================
-# | Covergroup Coverage |      1 |    83.333% |
+# | Covergroup Coverage |      1 |   100.000% |
 # |---------------------|--------|------------|
-# | Types               |        |      1 / 2 |
+# | Types               |        |      2 / 2 |
 # =============================================
-# CUMULATIVE INSTANCE-BASED COVERAGE: 83.333%
-# COVERED INSTANCES: 1 / 2
+# CUMULATIVE INSTANCE-BASED COVERAGE: 100.000%
+# COVERED INSTANCES: 2 / 2
 # FILES: 1
 # 
 # 
@@ -123,9 +1376,13 @@ exec cat cov.txt;
 #     |-------------------------------------------------------|----------|----------|---------|
 #     | COVERPOINT UART_MONITOR_TX_RANGE_COVERED::TX_RANGE_CP | 100.000% | 100.000% | Covered |
 #     |-------------------------------------------------------|----------|----------|---------|
-#     | bin low                                               |       64 |        1 | Covered |
-#     | bin med                                               |       66 |        1 | Covered |
-#     | bin high                                              |       70 |        1 | Covered |
+#     | bin zero                                              |       41 |        1 | Covered |
+#     | bin all_ones                                          |       43 |        1 | Covered |
+#     | bin alt1                                              |       14 |        1 | Covered |
+#     | bin alt2                                              |       19 |        1 | Covered |
+#     | bin low                                               |       29 |        1 | Covered |
+#     | bin med                                               |       24 |        1 | Covered |
+#     | bin high                                              |       30 |        1 | Covered |
 #     =========================================================================================
 # 
 # 
@@ -136,39 +1393,42 @@ exec cat cov.txt;
 #     =============================================
 #     |    Coverage Type    | Weight | Hits/Total |
 #     =============================================
-#     | Covergroup Coverage |      1 |    66.666% |
+#     | Covergroup Coverage |      1 |   100.000% |
 #     |---------------------|--------|------------|
-#     | Types               |        |      0 / 1 |
+#     | Types               |        |      1 / 1 |
 #     =============================================
-#     WEIGHTED AVERAGE LOCAL: 66.666%
+#     WEIGHTED AVERAGE LOCAL: 100.000%
 # 
 # 
 #     COVERGROUP COVERAGE
-#     =========================================================================================
-#     |                     Covergroup                      |   Hits   |  Goal /  |  Status   |
-#     |                                                     |          | At Least |           |
-#     =========================================================================================
-#     | TYPE /scoreboard/cvg_tx_rx                          |  66.666% | 100.000% | Uncovered |
-#     =========================================================================================
-#     | INSTANCE UART_SCOREBOARD_MATCH_COVERED              |  66.666% | 100.000% | Uncovered |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::tx_cp     | 100.000% | 100.000% | Covered   |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | bin low                                             |       64 |        1 | Covered   |
-#     | bin med                                             |       66 |        1 | Covered   |
-#     | bin high                                            |       70 |        1 | Covered   |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::match_cp  |  50.000% | 100.000% | Uncovered |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | bin matched                                         |      200 |        1 | Covered   |
-#     | bin mismatched                                      |        0 |        1 | Zero      |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | CROSS UART_SCOREBOARD_MATCH_COVERED::TX_MATCH_CROSS |  50.000% | 100.000% | Uncovered |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | bin <low,matched>                                   |       64 |        1 | Covered   |
-#     | bin <med,matched>                                   |       66 |        1 | Covered   |
-#     | bin <high,matched>                                  |       70 |        1 | Covered   |
-#     =========================================================================================
+#     =======================================================================================
+#     |                     Covergroup                      |   Hits   |  Goal /  | Status  |
+#     |                                                     |          | At Least |         |
+#     =======================================================================================
+#     | TYPE /scoreboard/cvg_tx_rx                          | 100.000% | 100.000% | Covered |
+#     =======================================================================================
+#     | INSTANCE UART_SCOREBOARD_MATCH_COVERED              | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::tx_cp     | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | bin low                                             |       84 |        1 | Covered |
+#     | bin med                                             |       40 |        1 | Covered |
+#     | bin high                                            |       76 |        1 | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::match_cp  | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | bin matched                                         |      190 |        1 | Covered |
+#     | bin mismatched                                      |       10 |        1 | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | CROSS UART_SCOREBOARD_MATCH_COVERED::TX_MATCH_CROSS | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | bin <low,matched>                                   |       81 |        1 | Covered |
+#     | bin <low,mismatched>                                |        3 |        1 | Covered |
+#     | bin <med,matched>                                   |       39 |        1 | Covered |
+#     | bin <med,mismatched>                                |        1 |        1 | Covered |
+#     | bin <high,matched>                                  |       70 |        1 | Covered |
+#     | bin <high,mismatched>                               |        6 |        1 | Covered |
+#     =======================================================================================
 # 
 # 
 # +++++++++++++++++++++++++++++++++++++++++++++
@@ -180,12 +1440,12 @@ exec cat cov.txt;
 # =============================================
 # |    Coverage Type    | Weight | Hits/Total |
 # =============================================
-# | Covergroup Coverage |      1 |    83.333% |
+# | Covergroup Coverage |      1 |   100.000% |
 # |---------------------|--------|------------|
-# | Types               |        |      1 / 2 |
+# | Types               |        |      2 / 2 |
 # =============================================
-# CUMULATIVE DESIGN-BASED COVERAGE: 83.333%
-# COVERED DESIGN UNITS: 1 / 2
+# CUMULATIVE DESIGN-BASED COVERAGE: 100.000%
+# COVERED DESIGN UNITS: 2 / 2
 # FILES: 1
 # 
 # 
@@ -214,9 +1474,13 @@ exec cat cov.txt;
 #     |-------------------------------------------------------|----------|----------|---------|
 #     | COVERPOINT UART_MONITOR_TX_RANGE_COVERED::TX_RANGE_CP | 100.000% | 100.000% | Covered |
 #     |-------------------------------------------------------|----------|----------|---------|
-#     | bin low                                               |       64 |        1 | Covered |
-#     | bin med                                               |       66 |        1 | Covered |
-#     | bin high                                              |       70 |        1 | Covered |
+#     | bin zero                                              |       41 |        1 | Covered |
+#     | bin all_ones                                          |       43 |        1 | Covered |
+#     | bin alt1                                              |       14 |        1 | Covered |
+#     | bin alt2                                              |       19 |        1 | Covered |
+#     | bin low                                               |       29 |        1 | Covered |
+#     | bin med                                               |       24 |        1 | Covered |
+#     | bin high                                              |       30 |        1 | Covered |
 #     =========================================================================================
 # 
 # 
@@ -227,43 +1491,46 @@ exec cat cov.txt;
 #     =============================================
 #     |    Coverage Type    | Weight | Hits/Total |
 #     =============================================
-#     | Covergroup Coverage |      1 |    66.666% |
+#     | Covergroup Coverage |      1 |   100.000% |
 #     |---------------------|--------|------------|
-#     | Types               |        |      0 / 1 |
+#     | Types               |        |      1 / 1 |
 #     =============================================
-#     WEIGHTED AVERAGE: 66.666%
+#     WEIGHTED AVERAGE: 100.000%
 # 
 # 
 #     COVERGROUP COVERAGE
-#     =========================================================================================
-#     |                     Covergroup                      |   Hits   |  Goal /  |  Status   |
-#     |                                                     |          | At Least |           |
-#     =========================================================================================
-#     | TYPE /scoreboard/cvg_tx_rx                          |  66.666% | 100.000% | Uncovered |
-#     =========================================================================================
-#     | INSTANCE UART_SCOREBOARD_MATCH_COVERED              |  66.666% | 100.000% | Uncovered |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::tx_cp     | 100.000% | 100.000% | Covered   |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | bin low                                             |       64 |        1 | Covered   |
-#     | bin med                                             |       66 |        1 | Covered   |
-#     | bin high                                            |       70 |        1 | Covered   |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::match_cp  |  50.000% | 100.000% | Uncovered |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | bin matched                                         |      200 |        1 | Covered   |
-#     | bin mismatched                                      |        0 |        1 | Zero      |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | CROSS UART_SCOREBOARD_MATCH_COVERED::TX_MATCH_CROSS |  50.000% | 100.000% | Uncovered |
-#     |-----------------------------------------------------|----------|----------|-----------|
-#     | bin <low,matched>                                   |       64 |        1 | Covered   |
-#     | bin <med,matched>                                   |       66 |        1 | Covered   |
-#     | bin <high,matched>                                  |       70 |        1 | Covered   |
-#     =========================================================================================
+#     =======================================================================================
+#     |                     Covergroup                      |   Hits   |  Goal /  | Status  |
+#     |                                                     |          | At Least |         |
+#     =======================================================================================
+#     | TYPE /scoreboard/cvg_tx_rx                          | 100.000% | 100.000% | Covered |
+#     =======================================================================================
+#     | INSTANCE UART_SCOREBOARD_MATCH_COVERED              | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::tx_cp     | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | bin low                                             |       84 |        1 | Covered |
+#     | bin med                                             |       40 |        1 | Covered |
+#     | bin high                                            |       76 |        1 | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | COVERPOINT UART_SCOREBOARD_MATCH_COVERED::match_cp  | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | bin matched                                         |      190 |        1 | Covered |
+#     | bin mismatched                                      |       10 |        1 | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | CROSS UART_SCOREBOARD_MATCH_COVERED::TX_MATCH_CROSS | 100.000% | 100.000% | Covered |
+#     |-----------------------------------------------------|----------|----------|---------|
+#     | bin <low,matched>                                   |       81 |        1 | Covered |
+#     | bin <low,mismatched>                                |        3 |        1 | Covered |
+#     | bin <med,matched>                                   |       39 |        1 | Covered |
+#     | bin <med,mismatched>                                |        1 |        1 | Covered |
+#     | bin <high,matched>                                  |       70 |        1 | Covered |
+#     | bin <high,mismatched>                               |        6 |        1 | Covered |
+#     =======================================================================================
 # 
 exit
 # VSIM: Simulation has finished.
 Finding VCD file...
 ./dump.vcd
-[2026-03-30 06:47:31 UTC] Opening EPWave...
+[2026-03-30 19:48:32 UTC] Opening EPWave...
 Done
